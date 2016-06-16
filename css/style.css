@@ -1,0 +1,73 @@
+/*General*/
+html, body {
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding-top: 25px;
+}
+
+/*Google Maps*/
+#map {
+    height: 100%;
+}
+
+.gm-style-iw div {
+ overflow:hidden !important;
+}
+
+.yelp-img {
+    padding-left: 2px;
+}
+
+/*Navigation Bar*/
+.btn {
+    margin: 5px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+/*Search bar*/
+input {
+    /*<div>Icons made by <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>*/
+    background-image: url('http://vijjurao.github.io/project5-neighborhood-map/images/magnifier12.png');
+    background-size:  18px 18px;
+    background-repeat: no-repeat;
+    background-position: right 5px bottom 1px;
+    border-radius: 5px;
+    height: 25px;
+    margin: 10px;
+    margin-left: 0;
+    padding: 5px;
+    width: 33.33%;
+}
+
+/*Sidebar*/
+#list-sidebar {
+    min-width: 255px;
+}
+
+li {
+    color: #337ab7;
+    line-height: 2;
+}
+
+/*Media queries*/
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 25px;
+    }
+    input {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    input {
+        background-image: none;
+        font-size: 12px;
+        width: 20%;
+    }
+    .navbar-brand {
+        font-size: 15px;
+    }
+}

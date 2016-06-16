@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>California Golf Courses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- Navbar at the top of the screen with header and search bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" href="#">California Golf Courses</a>
+            </div>
+            <form>
+                <input class="pull-right" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off" type="text" placeholder="Search">
+            </form>
+            <!--<a href="#menu-toggle" data-toggle="collapse" data-target="list-sidebar" aria-expanded="true" class="btn btn-default" id="menu-toggle"><span>-</span></a>-->
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#wrapper" aria-expanded="true">=</button>
+        </div>
+    </nav>
+
+    <!-- Sidebar with list of golf courses -->
+    <div id="wrapper" aria-expanded="true" class="collapse in">
+        <div id="list-sidebar" class="col-sm-3 col-md-2 text-nowrap sidebar">
+            <!-- Display each name of marker with Knockout foreach -->
+            <ul id="listed-items" class="nav nav-sidebar" data-bind="foreach: filterPins">
+                <!-- Allow for clicks on names to open corresponding infowindow on marker -->
+                <li data-bind="text: name, click: listClick($data.id())"></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Document division to place Google Maps  -->
+    <div id="map"></div>
+
+    <!-- jQuery for AJAX, Bootstrap.js, and appending elements -->
+    <script src="js/lib/jquery-1.11.3.min.js"></script>
+    <!-- Will execute function depending on whether Google Maps loads successfully or fails -->
+    <script>
+        function googleSuccess() {
+            console.log("Google Maps sucessfully loaded.")
+        };
+
+        function googleError() {
+            $("#map").append("<h3>Couldn't load Google Maps</h3>");
+        };
+    </script>
+    <!--Google Maps API script -->
+    <script async src="https://maps.googleapis.com/maps/api/js?callback=googleSuccess" onerror="googleError()"></script>
+    <!-- Oauth to allow Yelp API usage -->
+    <script src="bower_components/oauth-signature/dist/oauth-signature.js"></script>
+    <!-- Knockout for data-binding and filtering of markers -->
+    <script src="bower_components/knockout/dist/knockout.js"></script>
+    <!-- Boostrap for toggle list with collapse transition -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Main javascript file to run map -->
+    <script src="dist/js/app-map.js"></script>
+    <!-- Refresh page when saves are made on watched files. How to: 'npm install' for dependencies then 'grunt watch'-->
+</body>
+
+</html>
