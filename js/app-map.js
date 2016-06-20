@@ -88,6 +88,8 @@ function init() {
             data: parameters,
             cache: true, // This is crucial to include as well to prevent jQuery from adding on a cache-buster parameter "_=23489489749837", invalidating our oauth-signature
             dataType: 'jsonp',
+            timeout: 5000,
+
             success: function(data) {
 
                 //Content based on the name of each marker with rating, review, image, and location
