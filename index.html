@@ -52,8 +52,7 @@
             $("#map").append("<h3>Couldn't load Google Maps</h3>");
         };
     </script>
-    <!--Google Maps API script -->
-    <script async src="https://maps.googleapis.com/maps/api/js?callback=googleSuccess" onerror="googleError()"></script>
+    
     <!-- Oauth to allow Yelp API usage -->
     <script src="bower_components/oauth-signature/dist/oauth-signature.js"></script>
     <!-- Knockout for data-binding and filtering of markers -->
@@ -62,6 +61,8 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Main javascript file to run map -->
     <script src="dist/js/app-map.js"></script>
+    <!--Google Maps API script -->
+    <script async src="https://maps.googleapis.com/maps/api/js?callback=init" onerror="googleError()"></script>
     <!-- Refresh page when saves are made on watched files. How to: 'npm install' for dependencies then 'grunt watch'-->
 </body>
 
