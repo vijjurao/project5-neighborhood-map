@@ -11,7 +11,7 @@ function init() {
     //Google map created inside the map div
     var map;
     map = new google.maps.Map(document.getElementById('map'), {
-        center: new google.maps.LatLng(0, 0),
+        center: new google.maps.LatLng(33.668475, -117.326699),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
