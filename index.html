@@ -61,8 +61,9 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Main javascript file to run map -->
     <script src="dist/js/app-map.js"></script>
-    <!--Google Maps API script -->
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU996aOTE2NdZVJUO7xk7-8c2fhQY9Mhc&callback=init" onerror="googleError()"></script>
+    <!--Google Maps API script 
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU996aOTE2NdZVJUO7xk7-8c2fhQY9Mhc&callback=googleSuccess" onerror="googleError()"></script>-->
+    <script async src="https://maps.googleapis.com/maps/api/js?callback=googleSuccess" onerror="googleError()"></script>
     <!-- Refresh page when saves are made on watched files. How to: 'npm install' for dependencies then 'grunt watch'-->
 </body>
 
