@@ -63,7 +63,7 @@ function init() {
         YELP_KEY_SECRET = "fo8iIXS_u_TjOil8uMnNTm8LdEc";
         YELP_TOKEN = "jRyu-QVU-IozwSQnZHW4u2U2Z0DVoGjd";
         YELP_TOKEN_SECRET = "AyCSVZzGk-1kxF1I34unTYKw0vc";
-        var yelp_url = 'https://api.yelp.com/v2/search';
+        var yelp_url = 'http://api.yelp.com/v2/search';
 
         //Parameters for retrieving Yelp information based on location and name
         //passed in for each marker
@@ -89,10 +89,7 @@ function init() {
             cache: true, // This is crucial to include as well to prevent jQuery from adding on a cache-buster parameter "_=23489489749837", invalidating our oauth-signature
             dataType: 'jsonp',
             timeout: 5000,
-<<<<<<< HEAD
-=======
 
->>>>>>> gh-pages
             success: function(data) {
 
                 //Content based on the name of each marker with rating, review, image, and location
