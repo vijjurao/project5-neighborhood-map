@@ -109,9 +109,11 @@ function init() {
             },
             error: function() {
                 //Set the content of the infowindow when Yelp fails
+                google.maps.event.addListener(marker, 'click', function(){
                 var contentErrorString = "<p>Couldn't load Yelp information.</p>";
-                infowindow.setErrorContent(contentString);
+                infowindow.setContent(contentErrorString);
                 infowindow.open(map, marker);
+               });
             }
         };
 
